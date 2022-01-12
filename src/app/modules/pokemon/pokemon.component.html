@@ -3,7 +3,7 @@
     <div class="card-header">Choose your Pokemon!</div>
     <div class="card-body">
       <p class="card-text mt-2">{{pokemon$.name}}</p>
-      <div class="pokemon-details d-flex">
+      <div class="pokemon-details d-flex justify-content-around align-items-center">
         <div>
           <div>ID: {{pokemon$.id}}</div>
           <div>NAME: {{pokemon$.name}}</div>
@@ -13,8 +13,8 @@
         <img src={{pokemon$.sprites}} alt="pokemon-img">
       </div>
       <div class="button-container d-flex justify-content-between">
-        <a href="#" class="btn btn-warning mt-2" (click)="catch()">Cattura</a>
-        <a href="#" class="btn btn-success mt-2" (click)="notCatch()">Rifiuta</a>
+        <a href="#" class="btn btn-success mt-2" (click)="catch()">Cattura</a>
+        <a href="#" class="btn btn-danger mt-2" (click)="notCatch()">Rifiuta</a>
       </div>
       <div>E' apparso un {{pokemon$.name}} selvaggio! </div>
     </div>
@@ -22,7 +22,7 @@
 
 
   <div class="child-container d-flex mt-5">
-    <angprj-cattura class="me-3" [catchChoice]="catchChoice"></angprj-cattura>
-    <angprj-rifiuta [refuseChoice]="refuseChoice"></angprj-rifiuta>
+    <angprj-rifiuta class="me-3"  [refuseChoice]="refuseChoice"></angprj-rifiuta>
+    <angprj-cattura [catchChoice]="catchChoice"></angprj-cattura>
   </div>
 </div>
