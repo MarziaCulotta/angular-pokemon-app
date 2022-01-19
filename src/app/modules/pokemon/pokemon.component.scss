@@ -1,8 +1,23 @@
+.card-container {
+  background-color: rgb(114, 172, 211);
+  border-radius: 10px;
+}
+
 img {
-  width: 300px;
+width: 300px;
 }
 
 .text-details {
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+.card-text {
+  background-color: rgb(221, 222, 135);
+  border-radius: 10px;
+}
+
+.savage-pokemon-container {
   background-color: aquamarine;
   border-radius: 5px;
 }

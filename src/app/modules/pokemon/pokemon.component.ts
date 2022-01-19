@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { IPokemon, IPokemonResponse } from 'src/app/shared/models/interface-models';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PokemonService } from './services/pokemon.service';
 
 @Component({
@@ -12,6 +11,9 @@ export class PokemonComponent implements OnInit {
   pokemon$!: any;
   catchChoice: string[] = [];
   refuseChoice: string[] = [];
+  detailIsVisible =  false;
+
+  @Output() showDetails = new EventEmitter();
 
   constructor( private readonly pokemonService: PokemonService) { }
 
@@ -26,6 +28,8 @@ export class PokemonComponent implements OnInit {
   catch() {
     this.catchChoice.push(this.pokemon$);
     this.getRandomPokemon();
+
+    this.detailIsVisible = true;
   }
 
   notCatch() {
@@ -33,4 +37,18 @@ export class PokemonComponent implements OnInit {
     this.getRandomPokemon();
   }
 
+  hidePokemon(): void {
+    this.catchChoice = []
+  }
+
+  // showPokemonDetails() {
+  //   this.catchChoice.push(this.pokemon$);
+  //   this.getRandomPokemon();
+
+  //   this.detailIsVisible = true;
+  // }
+
 }
+
+
+

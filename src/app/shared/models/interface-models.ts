@@ -1,10 +1,10 @@
-export interface IPokemon {
-  id: number;
-  name: string;
-  officialArt: string;
-  weight: number;
-  height: number;
-}
+// export interface IPokemon {
+//   id: number;
+//   name: string;
+//   officialArt: string;
+//   weight: number;
+//   height: number;
+// }
 
 export interface IPokemonResponse {
   id: number;

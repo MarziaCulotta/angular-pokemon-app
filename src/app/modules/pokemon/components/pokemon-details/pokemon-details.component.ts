@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
   selector: 'angprj-pokemon-details',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() pokemon$: any;
+  @Output() hideDetails = new EventEmitter();
+
+  constructor(private readonly pokemonService: PokemonService) { }
 
   ngOnInit(): void {
   }
