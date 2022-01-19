@@ -18,4 +18,5 @@ export interface IPokemonResponse {
   };
   height: number;
   weight: number;
+  hp:number
 }

@@ -1,7 +1,7 @@
 <div class="card text-center">
   <div class="card-header">REFUSED POKEMON</div>
   <div class="card-text px-4 mt-2 mb-2" *ngFor="let choice of refuseChoice">
-    <div class="pokemon-details d-flex align-items-center">
+    <div class="pokemon-details d-flex align-items-center" (click)="showDetails.emit(choice)">
       <img class="pokemon-img pe-3" src={{choice.sprites}} alt="pokemon-img">
       <span class="pokeomn-numb pe-3">#{{choice.id}}</span>
       <span>{{choice.name}}</span>

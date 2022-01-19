@@ -8,8 +8,7 @@ import { PokemonService } from '../../services/pokemon.service';
 })
 export class PokemonDetailsComponent implements OnInit {
 
-  @Input() pokemon$: any;
-  @Output() hideDetails = new EventEmitter();
+  @Input() pokemon: any;
 
   constructor(private readonly pokemonService: PokemonService) { }
 

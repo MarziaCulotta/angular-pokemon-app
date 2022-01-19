@@ -21,7 +21,8 @@ export class PokemonService {
         name: res.name,
         sprites: res.sprites.other['official-artwork'].front_default,
         height: res.height,
-        weight: res.weight
+        weight: res.weight,
+        hp:res.stats[0].base_stat
       }))
     )
   }

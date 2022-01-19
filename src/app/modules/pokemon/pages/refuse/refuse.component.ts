@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'angprj-refuse',
@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RefuseComponent implements OnInit {
 
   @Input() refuseChoice: any[] = [];
+  @Output() showDetails = new EventEmitter();
+
 
   constructor() { }
 
