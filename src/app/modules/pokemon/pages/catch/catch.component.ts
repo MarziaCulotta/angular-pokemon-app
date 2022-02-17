@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IPokemonResponse } from 'src/app/shared/models/interface-models';
 
 
 @Component({
@@ -8,8 +9,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CatchComponent implements OnInit {
 
-  @Input() catchChoice: any[] = [];
+  @Input() catchChoice: IPokemonResponse[] = [];
   @Output() showDetails = new EventEmitter();
+  @Output() delete = new EventEmitter();
 
   constructor() { }
 

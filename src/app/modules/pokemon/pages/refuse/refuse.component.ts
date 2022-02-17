@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IPokemonResponse } from 'src/app/shared/models/interface-models';
 
 @Component({
   selector: 'angprj-refuse',
@@ -7,8 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class RefuseComponent implements OnInit {
 
-  @Input() refuseChoice: any[] = [];
+  @Input() refuseChoice: IPokemonResponse[] = [];
   @Output() showDetails = new EventEmitter();
+  @Output() delete = new EventEmitter();
 
 
   constructor() { }

@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { PokemonService } from '../../services/pokemon.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { IPokemonResponse } from 'src/app/shared/models/interface-models';
+
 
 @Component({
   selector: 'angprj-pokemon-details',
@@ -8,9 +9,9 @@ import { PokemonService } from '../../services/pokemon.service';
 })
 export class PokemonDetailsComponent implements OnInit {
 
-  @Input() pokemon: any;
+  @Input() pokemon!: IPokemonResponse;
 
-  constructor(private readonly pokemonService: PokemonService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

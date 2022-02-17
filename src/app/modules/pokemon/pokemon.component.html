@@ -1,6 +1,6 @@
 <div class="main-container d-flex justify-content-center mt-5">
 
-  <angprj-refuse class="me-3" (showDetails)="showPokemonDetails($event)" [refuseChoice]="refuseChoice"></angprj-refuse>
+  <angprj-refuse class="me-3" (showDetails)="showPokemonDetails($event)" (delete)="deleteRefusedPokemon($event)" [refuseChoice]="refuseChoice"></angprj-refuse>
 
   <div class="card-container p-3 mx-3">
     <p class="card-text text-center mt-2 py-2 pe-3">{{pokemon$.name}}</p>
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <angprj-catch class="ms-3" (showDetails)="showPokemonDetails($event)" [catchChoice]="catchChoice"></angprj-catch>
+  <angprj-catch class="ms-3" (showDetails)="showPokemonDetails($event)" (delete)="deleteCatchedPokemon($event)" [catchChoice]="catchChoice"></angprj-catch>
 
 </div>
 

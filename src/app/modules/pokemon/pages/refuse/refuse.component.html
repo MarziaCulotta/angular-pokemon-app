@@ -5,7 +5,7 @@
       <img class="pokemon-img pe-3" src={{choice.sprites}} alt="pokemon-img">
       <span class="pokeomn-numb pe-3">#{{choice.id}}</span>
       <span class="name">{{choice.name}}</span>
-      <button class="btn btn-danger ms-2">Delete</button>
     </div>
+    <button class="btn btn-danger" (click)="delete.emit(choice.id)">Delete</button>
   </div>
 </div>

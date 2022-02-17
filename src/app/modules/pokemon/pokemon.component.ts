@@ -9,9 +9,9 @@ import { PokemonService } from './services/pokemon.service';
 })
 export class PokemonComponent implements OnInit {
 
-  pokemon$!: any;
-  catchChoice: string[] = [];
-  refuseChoice: string[] = [];
+  pokemon$!: IPokemonResponse;
+  catchChoice: IPokemonResponse[] = [];
+  refuseChoice: IPokemonResponse[] = [];
 
   selectedPokemon!: IPokemonResponse;
   detailIsVisible =  false;
@@ -36,18 +36,18 @@ export class PokemonComponent implements OnInit {
     this.getRandomPokemon();
   }
 
-  showPokemonDetails(pokemon:any) {
-    console.log(pokemon,"show");
+  showPokemonDetails(pokemon: IPokemonResponse) {
     this.selectedPokemon = pokemon;
     this.detailIsVisible = true;
   }
 
+  deleteRefusedPokemon(id: number) {
+    this.refuseChoice = this.refuseChoice.filter(p => p.id !== id)
+  }
 
-  // hidePokemon(): void {
-  //   this.catchChoice = []
-  // }
+  deleteCatchedPokemon(id: number) {
+    this.catchChoice = this.catchChoice.filter(p => p.id !== id)
+  }
 
 }
-
-
 

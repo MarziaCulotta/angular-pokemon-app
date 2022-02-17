@@ -8,7 +8,7 @@ export interface IPokemonResponse {
       }
     }
   };
-  height: number;
-  weight: number;
-  hp:number
+  height?: number;
+  weight?: number;
+  hp?:number
 }
