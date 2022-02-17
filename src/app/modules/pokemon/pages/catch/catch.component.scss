@@ -2,6 +2,10 @@ img {
   width: 100px;
 }
 
-.card-text {
+.card-body {
   background-color: cadetblue;
+}
+
+.name {
+  text-transform: capitalize;
 }

@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { PokemonService } from '../../services/pokemon.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'angprj-catch',
@@ -9,6 +9,7 @@ import { PokemonService } from '../../services/pokemon.service';
 export class CatchComponent implements OnInit {
 
   @Input() catchChoice: any[] = [];
+  @Output() showDetails = new EventEmitter();
 
   constructor() { }
 

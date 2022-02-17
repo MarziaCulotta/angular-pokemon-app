@@ -1,3 +1,7 @@
+.main-container {
+  height: 550px;
+}
+
 .card-container {
   background-color: rgb(114, 172, 211);
   border-radius: 10px;
@@ -15,6 +19,12 @@ width: 300px;
 .card-text {
   background-color: rgb(221, 222, 135);
   border-radius: 10px;
+}
+
+.savage-pokemon-container,
+.card-text,
+.name {
+  text-transform: capitalize;
 }
 
 .savage-pokemon-container {

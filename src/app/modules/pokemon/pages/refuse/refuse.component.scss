@@ -2,6 +2,16 @@ img {
   width: 100px;
 }
 
-.card-text {
+.card-body {
   background-color: cadetblue;
+}
+
+.name {
+  text-transform: capitalize;
+}
+
+button {
+  width: 60px;
+  padding: 1px;
+  font-size: 0.7rem;
 }

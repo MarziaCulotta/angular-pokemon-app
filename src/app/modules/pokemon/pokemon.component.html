@@ -2,12 +2,12 @@
 
   <angprj-refuse class="me-3" (showDetails)="showPokemonDetails($event)" [refuseChoice]="refuseChoice"></angprj-refuse>
 
-  <div class="card-container p-3">
-    <p class="card-text mt-2 p-2">{{pokemon$.name}}</p>
+  <div class="card-container p-3 mx-3">
+    <p class="card-text text-center mt-2 py-2 pe-3">{{pokemon$.name}}</p>
     <div class="pokemon-details d-flex justify-content-around align-items-center">
       <div class="text-details p-3">
         <div>ID: {{pokemon$.id}}</div>
-        <div>NAME: {{pokemon$.name}}</div>
+        <div>NAME: <span class="name">{{pokemon$.name}}</span></div>
         <div>WEIGHT: {{pokemon$.weight}}</div>
         <div>HEIGHT: {{pokemon$.height}}</div>
       </div>
@@ -17,11 +17,11 @@
       <button class="btn btn-success mt-2" (click)="catch()" [disabled]="catchChoice.length > 5">Cattura</button>
       <button class="btn btn-danger mt-2" (click)="notCatch()">Rifiuta</button>
     </div>
-    <div class="savage-pokemon-container mt-3 p-3">E' apparso un {{pokemon$.name}} selvaggio!
+    <div class="savage-pokemon-container mt-4 p-3">E' apparso un {{pokemon$.name}} selvaggio!
     </div>
   </div>
 
-  <angprj-catch class="ms-3" (showDetails)="catch()" [catchChoice]="catchChoice"></angprj-catch>
+  <angprj-catch class="ms-3" (showDetails)="showPokemonDetails($event)" [catchChoice]="catchChoice"></angprj-catch>
 
 </div>
 

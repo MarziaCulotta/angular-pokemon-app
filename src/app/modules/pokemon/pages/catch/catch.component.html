@@ -1,9 +1,9 @@
 <div class="card text-center">
   <div class="card-header">CATCHED POKEMON</div>
-  <div class="card-text px-4 mt-2 mb-2" *ngFor="let choice of catchChoice">
-    <div class="pokemon-details d-flex flex-column justify-content-around align-items-center">
+  <div class="card-body px-4 mt-2 mb-2" *ngFor="let choice of catchChoice">
+    <div class="pokemon-details d-flex flex-column justify-content-around align-items-center" (click)="showDetails.emit(choice)">
       <img src={{choice.sprites}} alt="pokemon-img">
-      <span>{{choice.name}}</span>
+      <span class="name">{{choice.name}}</span>
     </div>
   </div>
 </div>

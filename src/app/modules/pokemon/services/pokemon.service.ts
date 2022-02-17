@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class PokemonService {
 
-  constructor( private readonly http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   getPokemon():Observable<IPokemonResponse> {
     const num = Math.floor(Math.random() * 898) + 1;
