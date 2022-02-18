@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPokemonResponse } from 'src/app/shared/models/interface-models';
 
 @Component({

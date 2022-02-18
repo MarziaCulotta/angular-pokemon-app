@@ -2,6 +2,10 @@ img {
   width: 100px;
 }
 
+.card-header {
+  background-color:  rgb(221, 222, 135);;
+}
+
 .card-body {
   background-color: cadetblue;
 }
@@ -10,9 +14,8 @@ img {
   text-transform: capitalize;
 }
 
-button {
+.btn {
   width: 60px;
   padding: 1px;
   font-size: 0.7rem;
-  margin-left: 70%;
 }

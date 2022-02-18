@@ -1,5 +1,17 @@
+.main-container {
+  height: 550px;
+}
+
+img {
+  width: 300px;
+}
+
 .name,
 .card-text {
   text-transform: capitalize;
 }
 
+.card-body {
+  background-color: #baf0b9;
+
+}

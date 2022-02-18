@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPokemonResponse } from 'src/app/shared/models/interface-models';
 
 
@@ -13,9 +14,13 @@ export class CatchComponent implements OnInit {
   @Output() showDetails = new EventEmitter();
   @Output() delete = new EventEmitter();
 
-  constructor() { }
+  constructor( private readonly router: Router) { }
 
   ngOnInit(): void {
   }
+
+  // btnClick() {
+  //   this.router.navigateByUrl('/details');
+  // }
 
 }

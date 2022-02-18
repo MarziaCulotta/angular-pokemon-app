@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPokemonResponse } from 'src/app/shared/models/interface-models';
 import { PokemonService } from './services/pokemon.service';
 
@@ -16,7 +17,7 @@ export class PokemonComponent implements OnInit {
   selectedPokemon!: IPokemonResponse;
   detailIsVisible =  false;
 
-  constructor( private readonly pokemonService: PokemonService) { }
+  constructor( private readonly pokemonService: PokemonService, private readonly router: Router) { }
 
   ngOnInit(): void {
     this.getRandomPokemon();
@@ -48,6 +49,14 @@ export class PokemonComponent implements OnInit {
   deleteCatchedPokemon(id: number) {
     this.catchChoice = this.catchChoice.filter(p => p.id !== id)
   }
+
+  close(status:boolean) {
+    this.detailIsVisible = status
+  }
+
+  // goToDetails() {
+  //   this.router.navigateByUrl(['details']);
+  // }
 
 }
 

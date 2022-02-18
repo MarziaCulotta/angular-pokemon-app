@@ -21,8 +21,10 @@
     </div>
   </div>
 
-  <angprj-catch class="ms-3" (showDetails)="showPokemonDetails($event)" (delete)="deleteCatchedPokemon($event)" [catchChoice]="catchChoice"></angprj-catch>
+  <angprj-catch class="ms-3" (showDetails)="showPokemonDetails($event)" (delete)="deleteCatchedPokemon($event)"  [catchChoice]="catchChoice"></angprj-catch>
 
 </div>
 
-<angprj-pokemon-details *ngIf="detailIsVisible" [pokemon]="selectedPokemon"></angprj-pokemon-details>
+<angprj-pokemon-details *ngIf="detailIsVisible" (close)="close($event)" [pokemon]="selectedPokemon"></angprj-pokemon-details>
+
+<!-- (click)="goToDetails()" -->

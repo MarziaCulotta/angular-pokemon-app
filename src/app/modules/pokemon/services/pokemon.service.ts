@@ -26,4 +26,17 @@ export class PokemonService {
       }))
     )
   }
+
+  getPokemonById(id:number):Observable<any> {
+    return this.http.get<any>(`${environment.apiURL}${id}`).pipe(
+      map( res => ({
+        id: res.id,
+        name: res.name,
+        sprites: res.sprites.other['official-artwork'].front_default,
+        height: res.height,
+        weight: res.weight,
+        hp:res.stats[0].base_stat
+      }))
+    )
+  }
 }
