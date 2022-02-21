@@ -14,15 +14,9 @@ export class CatchComponent implements OnInit {
   @Output() showDetails = new EventEmitter();
   @Output() delete = new EventEmitter();
 
-  constructor( private readonly router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-
-
-  // btnClick() {
-  //   this.router.navigateByUrl('/details');
-  // }
 
 }

@@ -27,7 +27,7 @@ export class PokemonService {
     )
   }
 
-  getPokemonById(id:number):Observable<any> {
+  getPokemonById(id:number):Observable<IPokemonResponse> {
     return this.http.get<any>(`${environment.apiURL}${id}`).pipe(
       map( res => ({
         id: res.id,
