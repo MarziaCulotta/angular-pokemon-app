@@ -1,22 +1,19 @@
 <div class="main-container">
   <div class="pokemon-container d-flex flex-column align-items-center">
-    <div class="card text-center">
-      <div class="card-header">Pokemon Details</div>
-      <div class="card-body">
-        <p class="card-text mt-2">{{pokemon.name}}</p>
-        <div class="pokemon-details d-flex justify-content-around align-items-center">
-          <div class="text-details p-3">
-            <div>ID: {{pokemon.id}}</div>
-            <div>NAME: <span class="name">{{pokemon.name}}</span></div>
-            <div>WEIGHT: {{pokemon.weight}}</div>
-            <div>HEIGHT: {{pokemon.height}}</div>
-          </div>
+    <div class="card-body">
+      <p class="card-text my-2 p-2">{{pokemon.name}}</p>
+      <div class="pokemon-details d-flex justify-content-around align-items-center">
+        <div class="text-details d-flex flex-column align-items-start p-3">
+          <div>ID: {{pokemon.id}}</div>
+          <div>NAME: <span class="name">{{pokemon.name}}</span></div>
+          <div>WEIGHT: {{pokemon.weight}}</div>
+          <div>HEIGHT: {{pokemon.height}}</div>
+        </div>
         <img src={{pokemon.sprites}} alt="pokemon-img">
       </div>
       <div class="button-container d-flex justify-content-end">
         <button class="btn btn-danger" (click)="close.emit(false)">Chiudi</button>
       </div>
-    </div>
   </div>
 </div>
 

@@ -54,9 +54,5 @@ export class PokemonComponent implements OnInit {
     this.detailIsVisible = status
   }
 
-  // goToDetails() {
-  //   this.router.navigateByUrl(['details']);
-  // }
-
 }
 

@@ -5,8 +5,10 @@
       <img class="pokemon-img pe-3" src={{choice.sprites}} alt="pokemon-img">
       <span class="pokeomn-numb pe-3">#{{choice.id}}</span>
       <span class="name">{{choice.name}}</span>
-      <a routerLink="pokemon/details/{{choice.id}}"><button class="btn btn-danger ms-3" (click)="showDetails.emit(choice)">Show</button></a>
-      <button class="btn btn-danger ms-3" (click)="delete.emit(choice.id)">Delete</button>
+      <div>
+        <button class="btn btn-danger ms-3" (click)="showDetails.emit(choice)">Show</button>
+        <button class="btn btn-danger ms-3" (click)="delete.emit(choice.id)">Delete</button>
+      </div>
     </div>
   </div>
 </div>

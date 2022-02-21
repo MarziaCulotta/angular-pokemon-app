@@ -9,22 +9,32 @@
   background-color: white;
 }
 
-.pokemon-container {
-  height: 550px;
-  z-index: 1;
-  position: relative;
+.card-body {
+  width: 700px;
+  background-color: cadetblue;
+  border-radius: 18px;
+}
+
+.name,
+.card-text {
+  text-transform: capitalize;
+  background-color: antiquewhite;
+  border-radius: 12px;
+}
+
+.text-details {
+  background-color: antiquewhite;
+  border-radius: 16px;
 }
 
 img {
   width: 300px;
 }
 
-.name,
-.card-text {
-  text-transform: capitalize;
+.btn {
+  border-radius: 12px;
 }
 
-.card-body {
-  background-color: #baf0b9;
 
-}
+
+
