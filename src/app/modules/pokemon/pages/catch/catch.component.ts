@@ -19,6 +19,8 @@ export class CatchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
   // btnClick() {
   //   this.router.navigateByUrl('/details');
   // }

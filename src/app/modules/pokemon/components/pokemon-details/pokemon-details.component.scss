@@ -1,5 +1,18 @@
 .main-container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.pokemon-container {
   height: 550px;
+  z-index: 1;
+  position: relative;
 }
 
 img {
