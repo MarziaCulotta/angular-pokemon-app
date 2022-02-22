@@ -14,7 +14,7 @@ export class PokemonComponent implements OnInit {
   refuseChoice: IPokemonResponse[] = [];
 
   selectedPokemon!: IPokemonResponse;
-  detailIsVisible =  false;
+  detailIsVisible = false;
 
   constructor( private readonly pokemonService: PokemonService) { }
 
